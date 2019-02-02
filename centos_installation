@@ -39,12 +39,12 @@ yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce
 yum install docker-ce docker-ce-cli containerd.io -y
 systemctl start docker
 
-7. Only on master now run - 
+8. Only on master now run - 
   a. kubeadm init --apiserver-advertise-address=<IP_ADDR_OF_MASTER> --pod-network-cidr=192.168.0.0/16
   b. Add the .kube file as per instructions from the output
   c. join the nodes as per the instructions from the output 
   
-8. Install CNI (Calico)
+9. Install CNI (Calico)
   a. kubectl apply -f https://docs.projectcalico.org/v3.3/getting-started/kubernetes/installation/hosted/rbac-kdd.yaml
   b. kubectl apply -f https://docs.projectcalico.org/v3.3/getting-started/kubernetes/installation/hosted/kubernetes-datastore/calico-networking/1.7/calico.yaml
 
